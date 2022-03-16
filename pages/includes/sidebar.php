@@ -31,7 +31,7 @@
             </a>
         </li>
         <li class="nav-item d-md-block d-none">
-            <a class="nav-link">เข้าสู่ระบบครั้งล่าสุด: <?php echo $_SESSION['AD_LOGIN'] ?>  </a>
+            <a class="nav-link">เข้าสู่ระบบครั้งล่าสุด: <?php //echo $_SESSION['AD_LOGIN'] ?>  </a>
         </li>
     </ul>
 </nav>
@@ -49,7 +49,7 @@
                 <img src="../../assets/images/avatar5.png" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="../manager/" class="d-block"> <?php echo $_SESSION['AD_FIRSTNAME'].' '.$_SESSION['AD_LASTNAME'] ?> </a>
+                <a href="../manager/" class="d-block"> <?php// echo $_SESSION['AD_FIRSTNAME'].' '.$_SESSION['AD_LASTNAME'] ?> </a>
             </div>
         </div>
         <nav class="mt-2">
