@@ -1,10 +1,7 @@
 <?php 
     /**
      * Main Sidebar
-     * 
-     * @link https://appzstory.dev
-     * @author Yothin Sapsamran (Jame AppzStory Studio)
-     */ 
+    */
     function isActive ($data) {
         $array = explode('/', $_SERVER['REQUEST_URI']);
         $key = array_search("pages", $array);
