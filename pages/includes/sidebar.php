@@ -55,31 +55,31 @@
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item">
-                    <a href="../dashboard/" class="nav-link <?php echo isActive('dashboard') ?>">
+                    <a href="#" class="nav-link <?php echo isActive('dashboard') ?>">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>หน้าหลัก</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="../manager/" class="nav-link <?php echo isActive('manager') ?>">
+                    <a href="#" class="nav-link <?php echo isActive('manager') ?>">
                         <i class="nav-icon fas fa-user-cog"></i>
                         <p>ผู้ดูแลระบบ</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="../members/" class="nav-link <?php echo isActive('members') ?>">
+                    <a href="#" class="nav-link <?php echo isActive('members') ?>">
                         <i class="nav-icon fas fa-users"></i>
                         <p>รายชื่อลูกค้า</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="../products/" class="nav-link <?php echo isActive('products') ?>">
+                    <a href="#" class="nav-link <?php echo isActive('products') ?>">
                         <i class="nav-icon fas fa-shopping-cart"></i>
                         <p>รายการสินค้า</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="../orders/" class="nav-link <?php echo isActive('orders') ?>">
+                    <a href="#" class="nav-link <?php echo isActive('orders') ?>">
                         <i class="nav-icon fas fa-cart-arrow-down"></i>
                         <p>รายการสั่งซื้อ</p>
                     </a>
