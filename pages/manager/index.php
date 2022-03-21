@@ -13,7 +13,10 @@
         <div class="row mt-5">
             <div class="col">
                 <div class="card mb-3">
-                    <h4 class="card-header bg-info">PHP PDO</h4>
+                    <div class="card-header bg-warning text-white d-flex justify-content-between">
+                        <h4> ข้อมูลสมาชิก</h4>
+                        <a href="form.php" class="btn btn-success text-white btn-sm">เพิ่มสมาชิกใหม่</a>
+                    </div>
                     <div class="card-body">
                         <table class="table">
                             <thead>
@@ -23,7 +26,7 @@
                                     <th>email</th>
                                     <th>role</th>
                                     <th>created_at</th>
-                                    <th>edit</th>
+                                    <th>จัดการ</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -37,15 +40,16 @@
                                     foreach($managers as $manager) {
                                         $n++;
                                         echo "
-                                            <tr class='align-items-center'>
+                                            <tr valign='middle'>
                                                 <td>{$n}</td>
                                                 <td>{$manager['name']}</td>
                                                 <td>{$manager['email']}</td>
                                                 <td>{$manager['role']}</td>
                                                 <td>{$manager['created_at']}</td>
-                                                <td><div class='d-grid gap-2 d-md-flex justify-content-md-end'>
-                                                <button class='btn btn-warning me-md-2' type='button'>Edit</button>
-                                                <button class='btn btn-danger' type='button'>Delete</button>
+                                                <td class='text-white'><div class='d-grid gap-2 d-md-flex '>
+                                                <a href='form.php?id={$manager['id']}&action=edit' class='me-mr-2'>Edit</a>
+                                                <a href='save.php?id={$manager['id']}&action=delete'>Delete</a>
+                                                
                                               </div></td>  
                                             </tr>
                                         ";
