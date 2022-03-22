@@ -5,8 +5,17 @@ $managerObj = new Manager;
 
 if($_REQUEST['action']=='delete'){
     $managerObj->deleteManager($_REQUEST['id']);
-}else{
-    $managerObj->addManager($_REQUEST);
+}
+elseif($_REQUEST['action']=='edit'){
+    $manager = $_REQUEST;
+    unset($manager['action']);
+    $managerObj->updateManager($manager);
+}
+elseif($_REQUEST['action']=='add'){
+    $manager = $_REQUEST;
+    unset($manager['action']);
+    unset($manager['id']);
+    $managerObj->addManager($manager);
 }
 
 

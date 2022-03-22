@@ -1,11 +1,15 @@
 <?php require $_SERVER['DOCUMENT_ROOT']."/POS/vendor/autoload.php" ?>
 <?php
    use App\Model\Manager;
+// if(isset($_REQUEST['action'])){
+    if($_REQUEST['action']=='edit'){
+        $managerObj = new Manager;
+        $manager = $managerObj->getManagerById($_REQUEST['id']);
+    
+         // print_r($manager);
+    }
+// }
 
-   if($_REQUEST['action']=='edit'){
-       $managerObj = new Manager;
-       $manager = $managerObj->getManagerById($_REQUEST['id']);
-   }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,17 +33,19 @@
                     </div>
                     <div class="card-body">
                         <form action="save.php" method="get">
+                            <input type="text" name="action" value="<?php echo ($_REQUEST['action']=='add' ? 'add' : 'edit');?>">
+                            <input type="text" name="id" value="<?php echo $manager['id'];?>">
                             <div class="form-group">
                                 <label for="name">ชื่อ-สกุล</label>
-                                <input class="form-control" type="text" id="name" name="name" value="<?php echo $manager['name'];?>">
+                                <input class="form-control" type="text" id="name" name="name" value="<?php //echo $manager['name'];?>">
                             </div>
                             <div class="form-group">
                                 <label for="email">E-mail</label>
-                                <input class="form-control" type="email" id="email" name="email" value="<?php echo $manager['email'];?>">
+                                <input class="form-control" type="email" id="email" name="email" value="<?php //echo $manager['email'];?>">
                             </div>
                             <div class="form-group">
                                 <label for="password">Password</label>
-                                <input class="form-control" type="password" id="password" name="password" value="<?php echo $manager['password'];?>">
+                                <input class="form-control" type="password" id="password" name="password" value="<?php //echo $manager['password'];?>">
                             </div>
                             <hr>
                             <button type="submit" class="btn btn-success">Save</button>

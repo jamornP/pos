@@ -47,8 +47,8 @@
                                                 <td>{$manager['role']}</td>
                                                 <td>{$manager['created_at']}</td>
                                                 <td class='text-white'><div class='d-grid gap-2 d-md-flex '>
-                                                <a href='form.php?id={$manager['id']}&action=edit' class='me-mr-2'>Edit</a>
-                                                <a href='save.php?id={$manager['id']}&action=delete'>Delete</a>
+                                                <a href='form.php?id={$manager['id']}&action=edit' class='me-mr-2'>แก้ไข</a>
+                                                <a href='save.php?id={$manager['id']}&action=delete'>ลบ</a>
                                                 
                                               </div></td>  
                                             </tr>

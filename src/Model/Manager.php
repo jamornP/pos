@@ -29,6 +29,18 @@ class Manager extends Db {
         $stmt->execute($manager);
         return $this->pdo->lastInsertId();
     }
+    public function updateManager($manager){
+        $sql = " 
+        UPDATE users SET 
+            name = :name,
+            email = :email,
+            password = :password
+        WHERE id = :id
+        ";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute($manager);
+        return true;
+    }
     public function deleteManager($id){
         $sql = "
             DELETE 
@@ -50,7 +62,7 @@ class Manager extends Db {
             WHERE 
                 id = ?
         ";
-        $stmt=$this->pdo->query($sql);
+        $stmt = $this->pdo->prepare($sql);
         $stmt->execute([$id]);
         $data = $stmt->fetchAll();
         return $data[0];
