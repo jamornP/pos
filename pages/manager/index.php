@@ -1,4 +1,4 @@
-<?php require $_SERVER['DOCUMENT_ROOT']."/POS/vendor/autoload.php" ?>
+<?php require $_SERVER['DOCUMENT_ROOT']."/POS/vendor/autoload.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
